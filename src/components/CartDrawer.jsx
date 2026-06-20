@@ -1,8 +1,8 @@
 import { useCart } from '../CartContext';
-
-const STRIPE_LINK = 'https://buy.stripe.com/6oUbJ13doblS0RrdsY3Je00';
+import { useNavigate } from 'react-router-dom';
 
 export default function CartDrawer() {
+  const navigate = useNavigate();
   const { cart, cartOpen, setCartOpen, removeItem, updateQuantity, subtotal, freeShippingThreshold, shippingProgress, freeShippingEarned } = useCart();
 
   return (
@@ -73,14 +73,12 @@ export default function CartDrawer() {
                 <span className="font-medium text-gray-700">Subtotal</span>
                 <span className="font-bold text-lg text-gray-900">${subtotal.toFixed(2)}</span>
               </div>
-              <a
-                href={STRIPE_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={() => { setCartOpen(false); navigate('/checkout'); }}
                 className="block w-full text-center bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 rounded-xl transition-all"
               >
                 Checkout — ${subtotal.toFixed(2)}
-              </a>
+              </button>
               <button onClick={() => setCartOpen(false)} className="w-full text-center text-sm text-gray-500 hover:text-gray-700 py-2">
                 Continue Shopping
               </button>

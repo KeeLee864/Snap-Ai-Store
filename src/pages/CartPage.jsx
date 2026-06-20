@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useCart } from '../CartContext';
 
-const STRIPE_LINK = 'https://buy.stripe.com/6oUbJ13doblS0RrdsY3Je00';
-
 export default function CartPage() {
+  const navigate = useNavigate();
   const { cart, removeItem, updateQuantity, subtotal, freeShippingThreshold, freeShippingEarned, shippingProgress } = useCart();
 
   if (cart.length === 0) {
@@ -80,14 +79,12 @@ export default function CartPage() {
               <span className="font-bold text-xl">${subtotal.toFixed(2)}</span>
             </div>
           </div>
-          <a
-            href={STRIPE_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            onClick={() => navigate('/checkout')}
             className="block w-full text-center bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 px-8 rounded-xl transition-all mt-6"
           >
-            Checkout — ${subtotal.toFixed(2)}
-          </a>
+            Proceed to Checkout
+          </button>
           <Link to="/" className="block text-center text-sm text-gray-500 hover:text-teal-600 mt-4">
             Continue Shopping
           </Link>

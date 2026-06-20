@@ -1,11 +1,12 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useCart } from '../CartContext';
 import product, { trustBadges, faqs } from '../data/products';
 
 const p = product[0];
-const STRIPE_LINK = 'https://buy.stripe.com/6oUbJ13doblS0RrdsY3Je00';
 
 export default function Home() {
+  const navigate = useNavigate();
   const { addItem, cart, subtotal, freeShippingThreshold, freeShippingEarned, shippingProgress, setCartOpen } = useCart();
   const [addedToCart, setAddedToCart] = useState(false);
   const [showUpsell, setShowUpsell] = useState(false);
@@ -24,7 +25,8 @@ export default function Home() {
   };
 
   const handleBuyNow = () => {
-    window.open(STRIPE_LINK, '_blank');
+    addItem(p);
+    navigate('/checkout');
   };
 
   const inCart = cart.some(item => item.id === p.id);

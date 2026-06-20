@@ -5,22 +5,30 @@ import Footer from './components/Footer';
 import CartDrawer from './components/CartDrawer';
 import Home from './pages/Home';
 import CartPage from './pages/CartPage';
+import CheckoutPage from './pages/CheckoutPage';
 import FAQ from './pages/FAQ';
 
 export default function App() {
   return (
     <CartProvider>
       <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/cart" element={<CartPage />} />
-            <Route path="/faq" element={<FAQ />} />
-          </Routes>
-        </main>
-        <Footer />
-        <CartDrawer />
+        <Routes>
+          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="*" element={
+            <>
+              <Header />
+              <main className="flex-1">
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/cart" element={<CartPage />} />
+                  <Route path="/faq" element={<FAQ />} />
+                </Routes>
+              </main>
+              <Footer />
+              <CartDrawer />
+            </>
+          } />
+        </Routes>
       </div>
     </CartProvider>
   );
