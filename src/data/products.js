@@ -16,7 +16,7 @@ const products = [
       'Relieves lower back pressure instantly',
       '30-day money-back guarantee'
     ],
-    image: '/images/posture-pal.png',
+    image: '/images/back-harmony.png',
     rating: 4.6,
     reviewCount: 891,
     upsell: { name: 'BackHarmony Car Seat Extension Strap', price: 5.99 },
