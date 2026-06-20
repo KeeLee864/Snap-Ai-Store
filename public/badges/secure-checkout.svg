@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="100%" height="100%">
+  <rect width="240" height="60" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="30" cy="30" r="20" fill="#ccfbf1"/>
+  <!-- Padlock Icon -->
+  <path d="M25 26V21C25 18.2386 27.2386 16 30 16C32.7614 16 35 18.2386 35 21V26" fill="none" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="22" y="25" width="16" height="13" rx="2" fill="#0d9488"/>
+  <circle cx="30" cy="31" r="1.5" fill="#ffffff"/>
+  <path d="M30 32.5V35" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Text -->
+  <text x="60" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0f172a">Secure Checkout</text>
+  <text x="60" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#64748b">100% SSL Encrypted</text>
+</svg>

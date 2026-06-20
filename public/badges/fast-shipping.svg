@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="100%" height="100%">
+  <rect width="240" height="60" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+  <circle cx="30" cy="30" r="20" fill="#ccfbf1"/>
+  <!-- Package Icon with motion lines -->
+  <path d="M22 23L30 19L38 23L30 27L22 23Z" fill="none" stroke="#0d9488" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M22 23V32L30 36V27" fill="none" stroke="#0d9488" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M38 23V32L30 36V27" fill="none" stroke="#0d9488" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M15 25H18" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M14 29H18" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Text -->
+  <text x="60" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0f172a">Fast Dispatch</text>
+  <text x="60" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12" font-weight="500" fill="#64748b">Ships in 24-48 Hours</text>
+</svg>
