@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../CartContext';
 
-const STRIPE_LINK = 'https://buy.stripe.com/6oUbJ13doblS0RrdsY3Je00';
+const STRIPE_LINK = 'https://buy.stripe.com/fZu00j8xI9dK6bLdsY3Je01';
 
 export default function CheckoutPage() {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ export default function CheckoutPage() {
           </svg>
         </div>
         <h1 className="text-2xl font-bold text-gray-900 mb-2">Your cart is empty</h1>
-        <p className="text-gray-500 mb-6">Add Posture Pal to your cart to checkout.</p>
+        <p className="text-gray-500 mb-6">Add BackHarmony to your cart to checkout.</p>
         <button onClick={() => navigate('/')} className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-xl transition-all">
           Shop Now
         </button>

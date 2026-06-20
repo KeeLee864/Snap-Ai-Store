@@ -20,7 +20,7 @@ export default function Home() {
   };
 
   const handleAddUpsell = () => {
-    addItem({ ...p, id: 'upsell-strap', name: 'Car Seat Extension Strap', price: 5.99, image: p.image });
+    addItem({ ...p, id: 'upsell-strap', name: 'BackHarmony Car Seat Extension Strap', price: 5.99, image: p.image });
     setShowUpsell(false);
   };
 
@@ -42,7 +42,7 @@ export default function Home() {
         <span>💯 30-day guarantee</span>
       </div>
 
-      {/* HERO SECTION — Full product focus */}
+      {/* HERO SECTION */}
       <section className="bg-gradient-to-b from-teal-50 via-white to-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-16">
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -57,7 +57,6 @@ export default function Home() {
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                   />
                 </div>
-                {/* Badge */}
                 <div className="absolute -top-3 -right-3 bg-amber-400 text-amber-900 text-xs font-bold px-4 py-2 rounded-full shadow-lg">
                   ⚡ BEST SELLER
                 </div>
@@ -66,17 +65,15 @@ export default function Home() {
 
             {/* Right: Product Info */}
             <div className="order-1 md:order-2">
-              {/* Brand */}
               <div className="flex items-center gap-2 mb-4">
                 <span className="text-teal-600 font-bold text-sm tracking-widest uppercase">Snap</span>
                 <span className="text-gray-300">·</span>
                 <span className="text-gray-500 text-sm">Problem Solved.</span>
               </div>
 
-              {/* Headline */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
-                Your Chair Is Destroying Your Back.
-                <span className="text-teal-600 block mt-2">Fix It for $30.</span>
+                Your Chair Is Wrecking Your Back.
+                <span className="text-teal-600 block mt-2">BackHarmony Fixes It for $30.</span>
               </h1>
 
               {/* Rating */}
@@ -100,12 +97,8 @@ export default function Home() {
                 <span className="bg-green-100 text-green-700 text-sm font-bold px-3 py-1 rounded-full">Save 14%</span>
               </div>
 
-              {/* Description */}
-              <p className="text-gray-600 leading-relaxed mb-6 text-base">
-                {p.description}
-              </p>
+              <p className="text-gray-600 leading-relaxed mb-6 text-base">{p.description}</p>
 
-              {/* Feature bullets */}
               <ul className="space-y-2 mb-8">
                 {p.features.slice(0, 4).map((f, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm text-gray-700">
@@ -115,7 +108,7 @@ export default function Home() {
                 ))}
               </ul>
 
-              {/* Add to Cart / Buy Now */}
+              {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-3 mb-4">
                 <button
                   onClick={handleAddToCart}
@@ -135,7 +128,6 @@ export default function Home() {
                 </button>
               </div>
 
-              {/* Payment icons */}
               <p className="text-xs text-gray-400 flex items-center gap-2">
                 <span>🔒 Secure checkout</span>
                 <span>·</span>
@@ -149,7 +141,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* UPSELL MODAL (after add-to-cart) */}
+      {/* UPSELL MODAL */}
       {showUpsell && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl">
@@ -158,7 +150,7 @@ export default function Home() {
               <div className="w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center text-2xl">🔗</div>
               <div className="flex-1">
                 <p className="font-semibold text-gray-900">Car Seat Extension Strap</p>
-                <p className="text-sm text-gray-500">Keeps Posture Pal secure in your car</p>
+                <p className="text-sm text-gray-500">Keeps BackHarmony secure in your car</p>
                 <p className="text-teal-600 font-bold mt-1">+$5.99</p>
               </div>
             </div>
@@ -209,7 +201,7 @@ export default function Home() {
       {/* FEATURES SECTION */}
       <section className="py-12 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">Why Posture Pal Works</h2>
+          <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">Why BackHarmony Works</h2>
           <div className="grid sm:grid-cols-3 gap-6">
             {[
               { icon: '🪑', title: 'Fits Any Chair', desc: 'Office, car, couch, gaming — elastic straps secure it to any backrest.' },
@@ -235,7 +227,7 @@ export default function Home() {
           <h2 className="text-2xl font-bold text-center text-gray-900 mb-10">Real Backs, Real Results</h2>
           <div className="grid sm:grid-cols-3 gap-6">
             {[
-              { name: 'David K.', text: 'I sit 10 hours a day for work. Lower back pain was killing me. After 3 days with Posture Pal, the pain is basically gone. Unreal.', stars: 5 },
+              { name: 'David K.', text: 'I sit 10 hours a day for work. Lower back pain was killing me. After 3 days with BackHarmony, the pain is basically gone. Unreal.', stars: 5 },
               { name: 'Rachel M.', text: 'Bought this for my WFH setup. I can actually feel my posture improving. My husband stole it for his car — ordering another one.', stars: 5 },
               { name: 'Tom S.', text: 'Truck driver here. 12-hour shifts were destroying my back. This cushion is the best $30 I\'ve ever spent. Period.', stars: 5 },
             ].map((t, i) => (
@@ -254,16 +246,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CROSS-SELL */}
+      <section className="py-10 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-xl font-bold text-gray-900 mb-6">Add a Car Strap for $5.99</h2>
+          <p className="text-gray-500 text-sm mb-6">Keeps BackHarmony secure on any car seat — most customers add this.</p>
+          <button onClick={handleAddUpsell} className="bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-xl transition-all">
+            Yes, Add the Car Strap
+          </button>
+        </div>
+      </section>
+
       {/* FAQ */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-2xl font-bold text-center text-gray-900 mb-8">Questions? We've Got Answers</h2>
           <div className="space-y-3">
             {faqs.map((faq, i) => (
-              <div key={i} className="bg-white rounded-xl border border-gray-100 overflow-hidden">
+              <div key={i} className="bg-gray-50 rounded-xl border border-gray-100 overflow-hidden">
                 <button
                   onClick={() => setActiveFaq(activeFaq === i ? null : i)}
-                  className="w-full flex items-center justify-between p-4 text-left font-medium text-gray-900 hover:bg-gray-50 transition-colors"
+                  className="w-full flex items-center justify-between p-4 text-left font-medium text-gray-900 hover:bg-white transition-colors"
                 >
                   {faq.q}
                   <svg className={`w-5 h-5 text-gray-400 transition-transform ${activeFaq === i ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">

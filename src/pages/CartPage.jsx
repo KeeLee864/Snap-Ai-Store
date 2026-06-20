@@ -10,9 +10,9 @@ export default function CartPage() {
       <div className="max-w-3xl mx-auto px-4 py-24 text-center">
         <span className="text-6xl">🛒</span>
         <h1 className="mt-4 text-2xl font-bold text-gray-900">Your Cart is Empty</h1>
-        <p className="text-gray-500 mt-2">Add Posture Pal to get started!</p>
+        <p className="text-gray-500 mt-2">Add BackHarmony to get started!</p>
         <Link to="/" className="mt-6 inline-block bg-teal-600 hover:bg-teal-700 text-white font-bold py-4 px-8 rounded-xl transition-all">
-          Add Posture Pal
+          Add BackHarmony
         </Link>
       </div>
     );

@@ -39,7 +39,7 @@ export default function CartDrawer() {
               <div className="flex flex-col items-center justify-center h-full text-gray-400 p-8">
                 <span className="text-5xl mb-4">🛒</span>
                 <p className="font-semibold text-gray-600">Your cart is empty</p>
-                <p className="text-sm mt-1">Add Posture Pal to get started!</p>
+                <p className="text-sm mt-1">Add BackHarmony to get started!</p>
               </div>
             ) : (
               <div className="p-4 space-y-4">
